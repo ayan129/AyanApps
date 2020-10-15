@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> TODO - LIST </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <nav  class="navbar navbar-expand-lg navbar-light bg-warning text-dark text-primary ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">TODOs List <span class="sr-only">(current)</span></a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="quiz.html">Quiz Application <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="stopwatch.html">Stop Watch <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="versatilecal.html">Versatile calculator <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+         
+        </div>
+      </nav> 
+
+
+
+<div class="contwo">
+
+    <h1>
+        TODOs List
+    </h1>
+</div>
+
+<div class="container">
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Title</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter the title of your work">
+          <small id="emailHelp" class="form-text text-muted">Add an item to the list.</small>
+        </div>
+    
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea placeholder="Enter the description of your work" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </form>
+</div>
+
+<div class="container">
+<button >Add Item</button> <button>Clear list </button> 
+
+</div>
+
+<div class="container">
+
+<div id="items" class="my-4">
+    <h2>Your List</h2>
+    <table class="table">
+        <thead class="ayan">
+          <tr>
+            <th scope="col">SNo</th>
+            <th scope="col">Work Title</th>
+            <th scope="col">Work Description</th> 
+            <th scope="col">Actions</th> 
+            <th scope="col">Actions</th> 
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr>
+            <th scope="row">1</th>
+            <td>Get some Coffee</td>
+            <td>You need coffee as you are a coder</td> 
+            <td><button>Delete </button> </td> 
+            <td><button>Edit list </button> </td>
+            
+          </tr>
+          
+        </tbody>
+      </table>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+  
+
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

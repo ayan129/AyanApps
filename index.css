@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+.navbar{
+    background-color : bisque !important;
+}
+.contwo{
+
+    font-family: 'Arapey', serif;
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+}
+button{
+    padding: 5px;
+    cursor: pointer;
+    font-family: 'Arapey', serif;
+    margin: 5px;
+    background-color : bisque ;
+    border: solid bisque;
+    border-radius: 7px;
+
+    }
+    .ayan{
+        background-color: bisque;
+    }
+    
