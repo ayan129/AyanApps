@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav  class="navbar navbar-expand-lg navbar-light bg-warning text-dark text-primary ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="stopwatch.html">Stop Watch  <span class="sr-only">(current)</span></a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="quiz.html">Quiz Application <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="versatilecal.html">Versatile calculator <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">TODOs List<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+         
+        </div>
+      </nav> 
+
+      <div class="contwo">
+
+        <h1>
+            Stop Watch
+        </h1>
+    </div>
+
+
+    <div class="safdar">
+        <div class="hassan">
+            <h2 id="min">00 </h2>
+            <h2 id="sec">00 </h2>
+            <h2 id="msec">00</h2>
+        </div>
+        <div class="ayan">
+            <button id="start" onclick="start()">START</button>
+            <button id="stop" onclick="stop()">STOP</button>
+            <button id="clear" onclick="reset()">RESET</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+
+
+    <style>
+       body {
+   
+    text-align: center;
+  }
+  
+  #start {
+    margin: 40px auto;
+    text-align: center;
+    color: #DAD6D6;
+    background: #008ae6;
+    border:solid 2px #008ae6;
+    border-radius:5px;
+    padding:10px 30px 10px;
+    letter-spacing: 2px;
+    cursor:pointer;
+  }
+  .navbar{
+    background-color : #6b6b47 !important;
+}
+.contwo{
+
+    font-family: 'Arapey', serif;
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+ 
+}
+  #stop {
+    margin: 40px 5px auto;
+    text-align: center;
+    color: #DAD6D6;
+    background: #4d0026;
+    border:solid 2px #4d0026;
+    border-radius:5px;
+    padding:10px 30px 10px;
+    letter-spacing: 2px;
+    cursor:pointer;
+  }
+  
+  #clear {
+    margin: 40px auto;
+    text-align: center;
+    color: #DAD6D6;
+    background: 	 #6b6b47;
+    border:solid 2px 	 #6b6b47;
+    border-radius:5px;
+    padding:10px 30px 10px;
+    letter-spacing: 2px;
+    cursor:pointer;
+  }
+  
+  h2
+  {
+    font-size: 46px;
+    letter-spacing: 2px;
+    margin: 200px 0 0 ;
+    display: inline;
+  }
+ #min{
+   margin: 30px;
+
+ }
+
+
+
+ #sec{
+   margin: 30px;
+ }
+
+
+ #msec{
+ margin: 30px;
+
+ }
+ .safdar{
+   margin-top: 100px;
+ }
+    </style>
+
+
+    <script>
+
+
+var min = 0;
+var sec = 0;
+var msec = 0;
+var minHeading = document.getElementById("min");
+var secHeading = document.getElementById("sec");
+var msecHeading = document.getElementById("msec");
+var interval;
+
+
+function timer(){
+    msec++
+    msecHeading.innerHTML = msec;                    
+    if( msec >= 100 ){
+        sec++
+        secHeading.innerHTML = sec;
+        msec = 0
+    }else if(sec >= 60){
+           min++
+           minHeading.innerHTML = min;
+           sec = 0 
+
+    }
+}
+
+ 
+function start(){
+    
+ interval = setInterval(timer,10) 
+
+}
+function stop(){
+ clearInterval(interval)   // ab yaha clear interval mt rukna he sai he aur uske andar jo chlrhatha wo dldeya
+
+ }
+ function reset(){
+       min = 0
+       sec = 0
+       msec = 0 
+       minHeading.innerHTML = min
+       secHeading.innerHTML = sec
+       msecHeading.innerHTML = msec
+       stop()
+
+ }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

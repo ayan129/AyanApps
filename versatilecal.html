@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    
+
+
+    <nav  class="navbar navbar-expand-lg navbar-light bg-warning text-dark text-primary ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="versatilecal.html">Versatile calculator <span class="sr-only">(current)</span></a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="quiz.html">Quiz Application <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="stopwatch.html">Stop Watch <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">TODOs List<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+         
+        </div>
+      </nav> 
+
+      <div class="contwo">
+
+        <h1>
+          Versatile calculator 
+        </h1>
+    </div>
+    <div class="container">
+        <form name="form">
+        <div class="display">
+        <input type="text" placeholder="0" name="displayResult" id="val">
+        </div>
+        <div class="buttons">
+        <div class="row">
+        <input type="button" name="b7" value="7" onClick="getvalue('7')">
+        <input type="button" name="b8" value="8" onClick="getvalue('8')">
+        <input type="button" name="b9" value="9" onClick="getvalue('9')">
+        <input type="button" name="addb" value="+" onClick="getvalue('+')">
+        </div>
+        
+        <div class="row">
+        <input type="button" name="b4" value="4" onClick="getvalue('4')">
+        <input type="button" name="b5" value="5" onClick="getvalue('5')">
+        <input type="button" name="b6" value="6" onClick="getvalue('6')">
+        <input type="button" name="subb" value="-" onClick="getvalue('-')">
+        </div>
+        
+        <div class="row">
+        <input type="button" name="b1" value="1" onClick="getvalue('1')">
+        <input type="button" name="b2" value="2" onClick="getvalue('2')">
+        <input type="button" name="b3" value="3" onClick="getvalue('3')">
+        <input type="button" name="mulb" value="x" onClick="getvalue('*')">
+        </div>
+        
+        <div class="row">
+        <input type="button" name="b0" value="0" onClick="getvalue('0')">
+        <input type="button" name="potb" value="C" onClick="clearresult()">
+        <input type="button" name="divb" value="/" onClick="getvalue('/')">
+        <input type="button" class="red" value="=" onClick="getresult()">
+        </div>
+        </div>
+        
+        </form>
+      </div>
+      
+<style>
+
+
+body, html {
+	background: #ECEDEF;
+	margin: 0;
+	padding: 0;
+}
+ 
+.container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+	border-radius: 14px;
+	padding-bottom: 20px;
+	width: 320px;
+	
+}
+
+.buttons {
+	padding: 20px 20px 0 20px;
+}
+.row {
+	width: 280px;
+	float: left;
+}
+.display {
+	width: 100%;
+	height: 70px;
+	padding: 40px 0 ;
+	background: #FF0509;
+	border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  margin-top: 15px !important;
+
+}
+input[type=button] {
+	width: 60px;
+	height: 60px;
+	float: left;
+	padding: 0;
+	margin: 5px;
+	box-sizing: border-box;
+	background: #ecedef;
+	border: none;
+	font-size: 30px;
+	line-height: 30px;
+	border-radius: 50%;
+	font-weight: 700;
+	color: #5E5858;
+	cursor: pointer;
+	
+}
+.contwo{
+
+font-family: 'Arapey', serif;
+margin: auto;
+padding: 25px;
+text-align: center;
+}
+
+.navbar{
+    background-color : #FF0509 !important;
+}
+input[type=text] {
+	width: 270px;
+	height: 60px;
+	float: left;
+	box-sizing: border-box;
+	border: none;
+	background: none;
+	color: gray;
+	text-align: right;
+	font-size: 60px;
+	line-height: 40px;
+  margin: 0 25px;
+  font-family: 'Orbitron', sans-serif;
+	
+}
+.red {
+	background: #FF0509 !important;
+	color: #ffffff !important;
+	
+}
+
+
+</style>
+
+
+<script>
+
+
+function getvalue(value){
+    var a = document.getElementById("val")
+    a.value += value;
+
+}
+function clearresult(){
+var b = document.getElementById("val")
+b.value = " "
+
+}
+function getresult(){
+var c = document.getElementById("val")
+c.value = eval(c.value)
+
+}
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
